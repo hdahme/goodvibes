@@ -18,6 +18,7 @@ or
 #2cf96c Aqua green
 #2cf9d3 Teal
 #2cb8f9 Blue
+#8e9b90 Gray
 */
 body{
 	font-family: 'Raleway', serif;
@@ -40,7 +41,7 @@ h3{
 }
 p{
 	font-size: 16px;
-	font-style: italic;
+	/*font-style: italic;*/
 	color: #818181;
 }
 a{
@@ -65,14 +66,14 @@ section{
 	content: '';
 	height: 5px;
 	width: 40px;
-	background-color: #2CB8F9;
+	background-color: #8e9b90;
 	position: absolute;
 	top: 81px;
 	left: calc(50% - 20px);
 }
 
-.emoji span{
-	font-style: oblique;
+.emoji{
+	font-style: normal;
 }
 
 
@@ -156,7 +157,7 @@ section{
 	content: '';
 	height: 100%;
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.1);
 	left: 0;
 	top: 0;
 }
@@ -173,7 +174,7 @@ section{
 	margin-bottom: 45px;
 }
 .vira-card .vira-card-header .card-icon{
-	border: 1px solid #F9D32C;
+	border: 1px solid #93c0a4;
 	border-radius: 100%;
 	display: inline-block;
 	height: 120px;
@@ -189,7 +190,7 @@ section{
 	content: '';
 	height: 100px;
 	width: 100px;
-	background-color: #2CB8F9;
+	background-color: #93c0a4;
 	border-radius: 100%;
 	position: absolute;
 	top: 9px;
@@ -209,7 +210,7 @@ section{
 	content: '';
 	height: 1px;
 	width: 44px;
-	background-color: #f9d32c;
+	background-color: #8e9b90;
 	position: absolute;
 	top: 52px;
 	left: calc(50% - 22px);
@@ -280,9 +281,9 @@ section{
 .social-icons ul a li{
 	display: inline-block;
 	list-style-type: none;
-    border: 2px solid #2CB8F9;
+    border: 2px solid #93c0a4;
     margin-right: 10px;
-    background-color: #2CB8F9;
+    background-color: #93c0a4;
     color: #fff;
 	font-size: 18px;
     line-height: 32px;
@@ -292,7 +293,7 @@ section{
 	margin-right: 0;
 }
 .social-icons ul a:hover li{
-	color: #2CB8F9;
+	color: #93c0a4;
 	background-color: #fff;
 }
 
@@ -366,7 +367,7 @@ section{
 
 /*Home page*/
 .header{
-	background-image: url(../images/yosemite-fog.jpg);
+	background-image: url(../images/redwoods.jpg);
 	height: 100vh;
 	position: relative;
 	min-height: 659px;
@@ -377,12 +378,13 @@ section{
 	display: table;
 	text-align: center;
 	width: 100%;
+	/*border-bottom: 3px solid rgba(255, 255, 255, 0.5);*/
 }
 .intro{
 	display: table-cell;
 	vertical-align: middle;
-	border-top: 3px solid rgba(255, 255, 255, 0.5);
-	border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+	/*border-top: 3px solid rgba(255, 255, 255, 0.5);
+	border-bottom: 3px solid rgba(255, 255, 255, 0.5);*/
 }
 .header h1{
 	margin: 0;
@@ -390,7 +392,7 @@ section{
 	font-weight: 600;
 }
 .header h1, .header h2, .header p{
-	color: #fff;
+	color: #FFF;
 	letter-spacing: 2px;
 	font-family: 'Raleway', serif;
 }
@@ -491,7 +493,7 @@ section{
 }
 
 .subscribe{
-	background-image: url(../images/mammoth-mountains-small.jpg);
+	background-image: url(../images/redwoods-small.jpg);
 }
 .subscribe .vira-btn{
 	margin-bottom: 0;
@@ -509,6 +511,9 @@ section{
 	font-size: 32px;
 	margin-bottom: 35px;
 	font-style: normal;
+}
+.subscribe .email-help {
+	color: #fff;
 }
 .subscribe .form-control{
     width: 320px;
@@ -544,7 +549,7 @@ section{
 .footer{
 	background-color: #202020;
 	text-align: center;
-	padding: 60px 0;
+	padding: 20px 0;
 }
 .footer span{
 	color: #2CB8F9;

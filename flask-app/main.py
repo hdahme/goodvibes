@@ -12,22 +12,27 @@ client = MailChimp(settings.MAILCHIMP_USER, settings.MAILCHIMP_KEY)
 def index():
     return render_template('index.html')
 
-@app.route('/subscribed') #, methods=['POST']
+@app.route('/subscribed', methods=['POST'])
 def subscribed():
     return render_template('subscribed.html')
 
-    # first_name = request.form['first-name']
-    # last_name = request.form['last-name']
-    # email = request.form['user-email']
-    #
-    # client.lists.members.create('fc1aa56de1', {
-    #     'email_address': email,
-    #     'status': 'subscribed',
-    #     'merge_fields': {
-    #         'FNAME': first_name,
-    #         'LNAME': last_name,
-    #     },
-    # })
+    first_name = request.form['first-name']
+    last_name = request.form['last-name']
+    email = request.form['user-email']
+
+    client.lists.members.create('fc1aa56de1', {
+        'email_address': email,
+        'status': 'subscribed',
+        'merge_fields': {
+            'FNAME': first_name,
+            'LNAME': last_name,
+        },
+    })
+
+    return render_template(
+        'subscribed.html',
+        fname=first_name
+    )
 
 
 @app.errorhandler(500)
