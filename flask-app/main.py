@@ -10,7 +10,10 @@ client = MailChimp(settings.MAILCHIMP_USER, settings.MAILCHIMP_KEY)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template(
+        'index.html',
+        ga_instance = settings.GA_INSTANCE,
+    )
 
 @app.route('/subscribed', methods=['POST'])
 def subscribed():

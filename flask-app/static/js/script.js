@@ -1,9 +1,9 @@
 $(document).ready(function() {
- 	
- 	$(window).scroll(function() {    
+
+ 	$(window).scroll(function() {
 	    var scroll = $(window).scrollTop();
 
-	    if (scroll >= 569) {
+	    if (scroll >= 569) { //&& scroll <= 2700
 	        $(".navbar").addClass("navbar-fixed-top dark-bar");
 	    } else {
 	        $(".navbar").removeClass("navbar-fixed-top dark-bar");
@@ -14,7 +14,7 @@ $(document).ready(function() {
 	// Smooth Scroll
 
 		$('a[href*="#"]:not([href="#"])').click(function() {
-		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 		        || location.hostname == this.hostname) {
 
 		        var target = $(this.hash);
@@ -69,19 +69,6 @@ $(document).ready(function() {
  	var h = $('.expert').height();
  	$('.expert .col-sm-6 div').height(function (index, height) {
 	    return (h);
-	});
-
- 	// Menu bar
-	$( ".menu" ).click(function() {
-		$(this).toggleClass('m c');
-		$('.menu span').toggleClass('ion-navicon ion-android-close');
-		$('#menu-item').toggleClass( "show-menu hide-menu" );
-	});
-
-	$( "#menu-item a" ).click(function() {
-		$('.menu').toggleClass('c m');
-		$('.menu span').toggleClass('ion-navicon ion-android-close');
-		$('#menu-item').toggleClass( "show-menu hide-menu" );
 	});
 
 

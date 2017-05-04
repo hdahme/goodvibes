@@ -1,31 +1,17 @@
 @import 'https://fonts.googleapis.com/css?family=Lora:400,400i,700|Raleway:300,600,700,900';
 @import 'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css';
 /*Global Settings*/
-/*
-rgb(249, 211, 44)
-rgb(185, 249, 44)
-rgb(82, 249, 44)
-rgb(44, 249, 108)
-rgb(44, 249, 211)
-rgb(44, 184, 249)
+:root {
+  --default-text-color: #424242;
+	--accent-color: #8e9b90;
+	--header-text: #FFFFFF;
+}
 
-or
-
-
-#f9d32c Sunburst yellow
-#b9f92c Yellow green
-#52f92c Bright green
-#2cf96c Aqua green
-#2cf9d3 Teal
-#2cb8f9 Blue
-#8e9b90 Gray
-*/
 body{
 	font-family: 'Raleway', serif;
 }
 h1, h2, h3, h4, h5, h6{
-	font-family: 'Playfair Display', serif;
-	color: #424242;
+	color: var(--default-text-color);
 
 	margin-bottom: 35px;
 	margin-top: 0;
@@ -44,9 +30,9 @@ p{
 	/*font-style: italic;*/
 	color: #818181;
 }
-a{
+/*a{
 	transition: all 0.3s ease-in-out;
-}
+}*/
 section{
 	text-align: center;
 }
@@ -54,8 +40,8 @@ section{
 	font-size: 32px;
 	line-height: 45px;
 	padding-left: 30px;
-	border-left: 3px solid #424242;
-	color: #424242;
+	border-left: 3px solid var(--default-text-color);
+	color: var(--default-text-color);
 }
 
 .title{
@@ -66,7 +52,7 @@ section{
 	content: '';
 	height: 5px;
 	width: 40px;
-	background-color: #8e9b90;
+	background-color: var(--accent-color);
 	position: absolute;
 	top: 81px;
 	left: calc(50% - 20px);
@@ -86,9 +72,42 @@ section{
 	border-radius: 0;
 	border-color: transparent;
 	transition: all 0.3s ease-in-out;
+	z-index: 1;
+	width: 100%;
+	margin: auto;
 }
+
+/* Nav */
+.r_spacer { margin-right: 140px; }
+.clearfix {
+	 *zoom: 1;
+	 margin-left: auto;
+	 margin-right: auto;
+	 display: block;
+	 z-index: 1;
+	 -webkit-padding-start: 0;
+ }
+.logo-holder {
+  background: url(../images/goodvibes-logo-small.png) no-repeat center center;
+  width: 94px; height: 85px;
+  position: absolute; top: 0;
+  margin-left: auto;
+	margin-right: auto;
+}
+header ul {
+  margin-top: -50px;
+  font-size: 20px;
+}
+header ul li { list-style: none; float: left; letter-spacing: 2px; }
+header ul li a {
+	display: block;
+	margin: 0 30px;
+	font-size: 12pt;
+}
+nav ul, nav ol { list-style: none; list-style-image: none; }
+
 .form-control option{
-	color: #424242;
+	color: var(--default-text-color);
 }
 .form-control{
 	border-radius: 0;
@@ -96,7 +115,7 @@ section{
     font-size: 18px;
     font-style: italic;
     background-color: transparent;
-    color: #424242;
+    color: var(--default-text-color);
     margin-bottom: 30px;
 	border-color: #2CB8F9;
 }
@@ -118,16 +137,16 @@ section{
 }
 
 .element .form-control::-webkit-input-placeholder {
-    color: #424242;
+    color: var(--default-text-color);
 }
 .element .form-control:-moz-placeholder { /* Firefox 18- */
-    color: #424242;
+    color: var(--default-text-color);
 }
 .element .form-control::-moz-placeholder {  /* Firefox 19+ */
-    color: #424242;
+    color: var(--default-text-color);
 }
 .element .form-control:-ms-input-placeholder {
-    color: #424242;
+    color: var(--default-text-color);
 }
 
 
@@ -147,6 +166,10 @@ section{
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
+	background-image: url(../images/goodvibes.jpg);
+	height: 100vh;
+	position: relative;
+	min-height: 659px;
 }
 .bg-img div{
 	z-index: 1;
@@ -210,7 +233,7 @@ section{
 	content: '';
 	height: 1px;
 	width: 44px;
-	background-color: #8e9b90;
+	background-color: var(--accent-color);
 	position: absolute;
 	top: 52px;
 	left: calc(50% - 22px);
@@ -258,13 +281,13 @@ section{
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .element .navigation-bar a{
-	color: #424242;
+	color: var(--default-text-color);
 }
 .element .dark-bar{
 	background-color: #fff;
 }
 .element .menu:after{
-	color: #424242;
+	color: var(--default-text-color);
 }
 .element .title:after{
 	left: 0;
@@ -299,51 +322,11 @@ section{
 
 
 
-
-
-
-
-
 /*Navigation*/
-#menu-item{
-	transition: all 0.3s ease-in-out;
-}
-.menu-item{
-	background-color: #1a1a1a;
-	text-align: center;
-	font-size: 16px;
-}
-.menu-item ul{
-	padding-left: 0;
-	margin-bottom: 0;
-}
-.menu-item ul a li{
-	padding: 15px 0;
-	list-style-type: none;
-	color: #fff;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.menu-item ul a:hover li{
-	color: #2CB8F9;
-	text-decoration: none;
-}
-.hide-menu{
-	margin-top: -200px;
-}
-.show-menu{
-	margin-top: 0;
-}
 .dark-bar{
-	background-color: #424242;
+	background-color: var(--default-text-color);
 	background-image: none;
-}
-.navigation-bar{
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-	padding: 15px 0;
-	font-size: 30px;
-}
-.navigation-bar a{
-	color: #fff;
+	z-index: 2;
 }
 .menu{
 	position: relative;
@@ -357,21 +340,9 @@ section{
 	color: #fff;
 	font-size: 16px;
 }
-.m:after{
-	content: 'MENU';
-}
-.c:after{
-	content: 'CLOSE';
-}
 
 
 /*Home page*/
-.header{
-	background-image: url(../images/goodvibes.jpg);
-	height: 100vh;
-	position: relative;
-	min-height: 659px;
-}
 
 .intro-box{
 	height: 100vh;
@@ -391,8 +362,9 @@ section{
 	font-size: 50px;
 	font-weight: 600;
 }
-.header h1, .header h2, .header p{
-	color: #FFF;
+.header h1, .header h2, .header p, .header a{
+	color: var(--header-text);
+	text-decoration: none;
 	letter-spacing: 2px;
 	font-family: 'Raleway', serif;
 }
@@ -409,7 +381,7 @@ section{
 }
 .header .vira-btn:hover{
 	background-color: #fff;
-	color: #424242;
+	color: var(--default-text-color);
 }
 
 .about{
@@ -489,15 +461,17 @@ section{
 }
 .watch a:hover, .watch a:active, .watch a:focus{
 	background-color: #fff;
-	color: #424242;
+	color: var(--default-text-color);
 }
 
 .subscribe{
 	background-image: url(../images/redwoods-small.jpg);
+	min-height: 50px;
+	height: 420px;
 }
 .subscribe .vira-btn{
 	margin-bottom: 0;
-	color: #424242;
+	color: var(--default-text-color);
 	font-weight: 700;
 	border-color: #fff;
 	background-color: #fff;

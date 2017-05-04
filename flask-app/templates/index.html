@@ -25,53 +25,39 @@
         <![endif]-->
     </head>
     <body>
-        <div id="menu-item" class="menu-item hide-menu">
-            <div class="container">
-                <ul>
-
-                    <a href="#about"><li>Who We Are</li></a>
-                    <a href="#expertise"><li>What We Do</li></a>
-                    <a href="#team"><li>The Team</li></a>
-                    <a href="#contact"><li>Contact Us</li></a>
-                </ul>
-            </div>
-        </div>
         <div class="main">
             <header class="bg-img header">
+              <div class="row">
                 <nav class="navbar navbar-default navbar-vira">
-                    <div class="container">
-                        <div class="navigation-bar">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <div class="logo">
-                                        <a href="#"><img src="/static/images/goodvibes-logo-small.png"></a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <div class="menu m">
-                                        <a href="#"><span class="ion-navicon _ion-android-menu"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  <div class="logo-holder"></div>
+                    <div class="col-md-8 col-md-offset-2">
+      								<ul class="clearfix">
+      									<li><a href="#about">Good Purpose</a></li>
+      									<li class="dot">.</li>
+                        <li><a href="#expertise" class="r_spacer">Good Process</a></li>
+      									<li><a href="#team">Good People</a></li>
+      									<li class="dot">.</li>
+      									<li><a href="#contact">Contact Us</a></li>
+      								</ul>
                     </div>
-                </nav>
-                <div class="container">
-                    <div class="row">
-                        <div class="intro-box">
-                            <div class="intro">
-                                <h1>Good Vibes Ventures</h1>
-                                <p>We grow companies with heart</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  </nav>
+              </div>
+              <div class="container">
+                  <div class="row">
+                      <div class="intro-box">
+                          <div class="intro">
+                              <h1>Good Vibes Ventures</h1>
+                              <p>We grow companies with heart</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
             </header>
             <section id="about" class="about section">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
-                            <h2 class="title">Who We Are</h2>
+                            <h2 class="title">A Good Purpose</h2>
                             <p>
                               Impact ventures are the heart of the market. Rather than growing for financial gain, they grow financially to advance social and environmental wellbeing. These companies commit to creating human value. We, in turn, commit to supporting them.
                             </p>
@@ -88,7 +74,7 @@
             </section>
             <section id="expertise" class="purpose section">
                 <div class="container">
-                    <h2 class="title">What We Do</h2>
+                    <h2 class="title">A Good Process</h2>
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="vira-card">
@@ -165,7 +151,7 @@
             </section>
             <section id="team" class="team section">
                 <div class="container">
-                    <h2 class="title">The Team</h2>
+                    <h2 class="title">Good People</h2>
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="vira-card">
@@ -256,7 +242,7 @@
                     </div>
                 </div>
             </section>
-            <section class="subscribe section bg-img">
+            <section class="subscribe section bg-img" id="contact">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
@@ -282,7 +268,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <!--<p> Handcrafted with <span class="fa fa-heart"></span> by <a href="http://themewagon.com/">ThemeWagon</a></p>-->
-                            <p> &copy; Harrison Dahme, 2017 </p>
+                            <p> &copy; Good Vibes Ventures, 2017 </p>
                         </div>
                     </div>
                 </div>
@@ -295,5 +281,15 @@
         <script src="https://use.fontawesome.com/55b73bf748.js"></script>
         <script src="/static/js/jquery.magnific-popup.js"></script>
         <script src="/static/js/script.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '{{ga_instance}}', 'auto');
+          ga('send', 'pageview');
+
+        </script>
     </body>
 </html>
