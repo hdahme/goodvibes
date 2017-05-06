@@ -33,11 +33,9 @@
                     <div class="col-md-8 col-md-offset-2">
       								<ul class="clearfix">
       									<li><a href="#about">Good Purpose</a></li>
-      									<li class="dot">.</li>
-                        <li><a href="#expertise" class="r_spacer">Good Process</a></li>
-      									<li><a href="#team">Good People</a></li>
-      									<li class="dot">.</li>
-      									<li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#expertise">Good Process</a></li>
+                        <li class="float-right"><a href="#contact">Contact Us</a></li>
+      									<li class="float-right"><a href="#team">Good People</a></li>
       								</ul>
                     </div>
                   </nav>
@@ -54,6 +52,7 @@
               </div>
             </header>
             <section id="about" class="about section">
+                <span class="anchor"></span>
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
@@ -73,15 +72,14 @@
                 </div>
             </section>
             <section id="expertise" class="purpose section">
+                <span class="anchor"></span>
                 <div class="container">
                     <h2 class="title">A Good Process</h2>
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="vira-card">
                                 <div class="vira-card-header">
-                                    <div class="card-icon">
-                                        <span class="fa fa-map-signs" aria-hidden="true"></span>
-                                    </div>
+                                  <img src="/static/images/i-strategy.png" class="expertise-icon">
                                 </div>
                                 <div class="vira-card-content">
                                     <h3>Strategy</h3>
@@ -103,9 +101,7 @@
                         <div class="col-sm-4">
                             <div class="vira-card">
                                 <div class="vira-card-header">
-                                    <div class="card-icon">
-                                        <span class="fa fa-signal" aria-hidden="true"></span>
-                                    </div>
+                                  <img src="/static/images/i-growth.png" class="expertise-icon">
                                 </div>
                                 <div class="vira-card-content">
                                     <h3>Growth</h3>
@@ -126,9 +122,7 @@
                         <div class="col-sm-4">
                             <div class="vira-card">
                                 <div class="vira-card-header">
-                                    <div class="card-icon">
-                                        <span class="fa fa-gears" aria-hidden="true"></span>
-                                    </div>
+                                  <img src="/static/images/i-finance.png" class="expertise-icon">
                                 </div>
                                 <div class="vira-card-content">
                                     <h3>Finance</h3>
@@ -150,6 +144,7 @@
                 </div>
             </section>
             <section id="team" class="team section">
+                <span class="anchor"></span>
                 <div class="container">
                     <h2 class="title">Good People</h2>
                     <div class="row">
@@ -216,39 +211,59 @@
                                 </div>
                             </div>
                         </div>
-                      <!-- </div> -->
-                      <!-- <div class="row"> -->
-                      <div class="col-sm-3">
-                          <div class="vira-card">
-                              <div class="vira-card-header">
-                                  <img class="img-responsive" src="/static/images/brandon.jpg">
-                              </div>
-                              <div class="vira-card-content">
-                                  <h3>Brandon Levy</h3>
-                                  <div class="social-icons">
-                                      <ul>
-                                          <a href="#"><li><span class="ion-social-facebook"></span></li></a>
-
-                                      </ul>
-                                  </div>
-                                  <p>
-                                      Energy nerd, corporate strategist, and all-around people person, equipped
-                                      with an MBA in Sustainable Management. Loves reading The Economist,
-                                      listening to hip-hop music, and philosophizing with his mates.
-                                  </p>
-                              </div>
-                          </div>
                       </div>
+                      <div class="row">
+                        <div class="col-sm-3">
+                            <div class="vira-card">
+                                <div class="vira-card-header">
+                                    <img class="img-responsive" src="/static/images/brandon.jpg">
+                                </div>
+                                <div class="vira-card-content">
+                                    <h3>Brandon Levy</h3>
+                                    <div class="social-icons">
+                                        <ul>
+                                            <a href="#"><li><span class="ion-social-facebook"></span></li></a>
+
+                                        </ul>
+                                    </div>
+                                    <p>
+                                        Energy nerd, corporate strategist, and all-around people person, equipped
+                                        with an MBA in Sustainable Management. Loves reading The Economist,
+                                        listening to hip-hop music, and philosophizing with his mates.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="vira-card">
+                                <div class="vira-card-header">
+                                    <img class="img-responsive" src="/static/images/jongillon.jpg">
+                                </div>
+                                <div class="vira-card-content">
+                                    <h3>Jon Gillon</h3>
+                                    <div class="social-icons">
+                                        <ul>
+                                            <a href="#"><li><span class="ion-social-facebook"></span></li></a>
+
+                                        </ul>
+                                    </div>
+                                    <p>
+                                        Serial entrepreneur Founder and funder.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="subscribe section bg-img" id="contact">
+            <section class="subscribe bg-img section" id="contact">
+                <span class="anchor"></span>
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
-                            <p>Enter your email to stay in touch
-                              <span class="emoji">😊</span>
+                            <p><a href="mailto:hello@goodvibes.ventures" class="vira-btn">Let's connect <span class="emoji">😊</span></a>
                             </p>
+                            <!--
                             <form method="post" action="{{ url_for('subscribed') }}" class="form-inline">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Your First Name..."><br>
@@ -258,7 +273,7 @@
                                 </div>
                                 <br>
                                 <button type="submit" class="btn vira-btn">Let's stay connected</button>
-                            </form>
+                            </form> -->
                         </div>
                     </div>
                 </div>
