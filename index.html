@@ -5,14 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Good Vibes Ventures | Home</title>
+        <title>Goodvibes Ventures | Home</title>
         <link rel="shortcut icon" type="image/png" sizes="32x32" href="images/goodvibes-logo-small.png"/>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
-        <link href="css/owl.carousel.css" rel="stylesheet">
-        <link href="css/owl.theme.default.min.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <link href="http://cdn.jsdelivr.net/jquery.owlcarousel/1.31/owl.carousel.css" rel="stylesheet">
+        <link href="http://cdn.jsdelivr.net/jquery.owlcarousel/1.31/owl.theme.css" rel="stylesheet">
+        <script src="http://cdn.jsdelivr.net/jquery.owlcarousel/1.31/owl.carousel.min.js"></script>
 
         <link href="css/magnific-popup.css" rel="stylesheet">
 
@@ -29,23 +31,24 @@
             <header class="bg-img header">
               <div class="row">
                 <nav class="navbar navbar-default navbar-vira">
-                  <div class="logo-holder"></div>
-                    <div class="col-md-8 col-md-offset-2">
-      								<ul class="clearfix">
-      									<li><a href="#about">Good Purpose</a></li>
-                        <li><a href="#expertise">Good Process</a></li>
-                        <li class="float-right"><a href="#apply">Apply</a></li>
-      									<li class="float-right"><a href="#team">Good People</a></li>
-      								</ul>
-                    </div>
-                  </nav>
+                  <div class="col-md-10 col-md-offset-1">
+    								<ul class="clearfix">
+    									<li><a href="#about">Good Purpose</a></li>
+                      <li><a href="#expertise">Good Process</a></li>
+                      <li><a href="#team">Good People</a></li>
+                      <li><a href="#portfolio">Good Companies</a></li>
+                      <li><a href="#apply">Apply</a></li>
+    								</ul>
+                  </div>
+                </nav>
               </div>
               <div class="container">
                   <div class="row">
                       <div class="intro-box">
                           <div class="intro">
-                              <h1>Good Vibes Ventures</h1>
+                              <h1>Goodvibes Ventures</h1>
                               <p>We grow companies with heart</p>
+                              <div class="logo-holder"></div>
                           </div>
                       </div>
                   </div>
@@ -55,7 +58,7 @@
                 <span class="anchor"></span>
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
+                        <div class="col-sm-8 col-sm-offset-2" style="text-align:center;">
                             <h2 class="title">A Good Purpose</h2>
                             <p>
                               Impact ventures are the heart of the market. Rather than growing for financial gain, they grow financially to advance social and environmental wellbeing. These companies commit to creating human value. We, in turn, commit to supporting them.
@@ -261,6 +264,50 @@
                     </div>
                 </div>
             </section>
+
+
+
+            <section id="portfolio" class="portfolio section">
+                <span class="anchor"></span>
+                <h2 class="title">Good Companies</h2>
+                <div class="container">
+                  <div class="row owl-carousel">
+                    <div class="item">
+                      <a href="https://www.myknktd.com/"><img src="images/logos/knktd.png"></a>
+                      <p>
+                        KnKt'd Health connects doctors with their patients between appointments reducing healthcare costs and driving data-informed decisions
+                      </p>
+                    </div>
+                    <div class="item">
+                      <a href="https://www.numarket.org/"><img src="images/logos/numarket.png"></a>
+                      <p>
+                        Nu Markets empowers rural Chinese women by transforming their handicrafts into beautiful accessories and teaching them to manage their supply chain
+                      </p>
+                    </div>
+                    <div class="item">
+                      <a href="http://www.educate2envision.org/adelante/"><img src="images/logos/adelante.png"></a>
+                      <p>
+                        Adelante produces delicious coffee that sends a Honduran child to school for 30 days with every pound of coffee sold
+                      </p>
+                    </div>
+                    <div class="item">
+                      <a href="http://grownetics.co/"><img src="images/logos/grownetics.png"></a>
+                      <p>
+                        Grownetics solves the world’s agricultural pollution and inefficiency problems through enterprise-scale A.I.
+                      </p>
+                    </div>
+                    <div class="item">
+                      <a href="http://www.chatterforacause.com/"><img src="images/logos/chatter.jpg"></a>
+                      <p>
+                        Chatter allows you to FaceTime with your favorite celebrities around the world for a good cause
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </section>
+
+
+
             <section class="subscribe bg-img section" id="apply">
                 <span class="anchor"></span>
                 <div class="container">
@@ -288,7 +335,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <!--<p> Handcrafted with <span class="fa fa-heart"></span> by <a href="http://themewagon.com/">ThemeWagon</a></p>-->
-                            <p> &copy; Good Vibes Ventures, 2017 </p>
+                            <p> &copy; Goodvibes Ventures, 2017 </p>
                             <p><a href="mailto:hello@goodvibes.ventures">Email us <span class="emoji">😊</span></a>
                         </div>
                     </div>
@@ -296,9 +343,7 @@
             </footer>
         </div>
 
-        <script src="js/jquery-3.1.1.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
         <script src="https://use.fontawesome.com/55b73bf748.js"></script>
         <script src="js/jquery.magnific-popup.js"></script>
         <script src="js/script.js"></script>
@@ -311,6 +356,22 @@
           ga('create', '{{ga_instance}}', 'auto');
           ga('send', 'pageview');
 
+        </script>
+        <script>
+          $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+
+              loop: true,
+              center: true,
+              margin: 10,
+              nav: false,
+              items: 3,
+              autoplay: true,
+              itemsTablet: [768,2],
+              itemsDesktopSmall : [1200,3]
+
+            });
+          });
         </script>
     </body>
 </html>

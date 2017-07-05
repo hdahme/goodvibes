@@ -82,9 +82,8 @@ section{
 .r_spacer { margin-right: 140px; }
 .clearfix {
 	 *zoom: 1;
-	 margin-left: auto;
-	 margin-right: auto;
-	 display: block;
+	 margin: inherit;
+	 display: inline-block;
 	 z-index: 1;
 	 -webkit-padding-start: 0;
  }
@@ -94,22 +93,20 @@ section{
   position: absolute; top: 0;
   margin-left: auto;
 	margin-right: auto;
+  margin-top: -50px;
 }
 header ul {
-  margin-top: -50px;
   font-size: 20px;
 }
 header ul li {
 	list-style: none;
-	float: left;
 	letter-spacing: 2px;
+  display: inline-block;
 }
-header ul li.float-right {
-	float:right;
-}
+
 header ul li a {
 	display: block;
-	margin: 0 30px;
+	margin: 0 25px;
 	font-size: 12pt;
 }
 nav ul, nav ol { list-style: none; list-style-image: none; }
@@ -406,7 +403,6 @@ nav ul, nav ol { list-style: none; list-style-image: none; }
 }
 
 img.team-photo  {
-	height: 355px;
   margin: auto;
 }
 
@@ -554,7 +550,7 @@ img.team-photo  {
 
 
 
-@media (max-width: 767px){
+@media (max-width: 992px){
 	.vira-card{
 		margin-bottom: 60px;
 	}
@@ -563,19 +559,18 @@ img.team-photo  {
 		padding: 15px 30px;
 	}
 
-  .logo-holder {
-    height: 0px;
-    position: absolute; top: 0;
-    margin-left: auto;
-  	margin-right: auto;
-  }
-
   .subscribe {
     height: 110px;
   }
 
+  .owl-carousel .owl-item {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   header ul { margin-top: 0px; }
-  header ul li{ height: 30px; width: 100%; float: left; position: relative; text-align: center; }
-  header ul li a { width: 100%; float: left; position: relative; text-align: center; border-bottom: 1px dotted rgba(255, 255, 255, 0.2); margin: 0px; }
+  header ul li{ height: 30px; width: 100%; position: relative; text-align: center; }
+  header ul li a { width: 100%; position: relative; text-align: center; border-bottom: 1px dotted rgba(255, 255, 255, 0.2); margin: 0px; }
   p.subscribe { font-size: 18px; }
 }
